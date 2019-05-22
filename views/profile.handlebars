@@ -1,0 +1,30 @@
+<div class="wrapper mx-auto mb-5">
+    <div class="row padding">
+        <div class="col-md-4">
+            <img src="/images/man.png">
+        </div>
+        <div class="col-md-8  mb-4">
+            <h6 class="display-4" style="color:white;"> {{user.name}} </h6>
+            <p class="lead" id="creationDate"> <strong> Account created on: </strong></p>
+        </div>
+        <p class="lead col-md-12"> <strong> Email id </strong>
+            : {{user.email}} </p>
+        <br>
+        <p class="lead col-md-12"> <strong> High Score </strong>
+            : {{user.highScore}} </p>
+        <br>
+        <p class="lead col-md-12"> <strong> Last Score </strong>
+            : {{user.lastScore}} </p>
+    </div>
+    <form method="post" action="/user/{{user.id}}?_method=DELETE">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" class="btn btn-danger " id="delete"
+            onclick="return confirm('Are you sure you want to Remove?');"> Delete My Account</button>
+    </form>
+</div>
+
+<script>
+    var creationDate = new Date("{{user.date}}");
+    creationDate = moment(creationDate).format('LLL');
+    document.getElementById('creationDate').innerHTML += creationDate;
+</script>

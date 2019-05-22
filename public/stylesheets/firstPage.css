@@ -1,0 +1,21 @@
+div.firstPage{
+
+    background-color:	rgba(0, 0, 0,0.5);
+    padding: 20px;
+    border-radius: 9px;
+    width:50%;
+    padding-left:40px;
+    height: auto;
+}
+
+a.btn.firstPage{
+
+    background-color: #ec5252;
+    padding-left: 60px;
+    padding-right: 60px;
+    border:2px solid white;
+}
+a.btn.firstPage:hover{
+    background-color: #e69494;
+    box-shadow: 0 4px 8px 4px rgba(199, 77, 77, 0.5);
+}

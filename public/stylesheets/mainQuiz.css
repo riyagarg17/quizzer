@@ -1,0 +1,88 @@
+.wrapper-quiz{
+
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 9px;
+    max-width:60%;
+    padding-left:30px;
+    margin-top: 8%;
+    padding-right:30px;
+}
+
+.quizTitle{
+    margin-left: 22%;
+    
+    color: white;
+    font-family: 'Rakkas', cursive;
+}
+
+.quizOption{
+
+    background-color: rgba(38, 117, 219, 0.8);
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border:2px solid white;
+    font-weight: 500;
+    cursor: pointer;
+    font-size:1vw;
+    height: 9vh;
+    margin-left: 34px;
+}
+
+.quizOption:hover{
+
+    background-color: rgb(91, 128, 230);
+    box-shadow: 0 4px 8px 4px rgba(43, 109, 196, 0.5);
+}
+p{
+    color: white;
+}
+
+.fa-trophy{
+    color: rgb(233, 233, 29);
+    margin-top: 1%;
+}
+
+.progress{
+   width: 20%;
+   margin-left: 75%;
+   margin-top: -7%;
+}
+
+#score{
+    margin-left: 40%;
+}
+
+.question{
+    font-size: 3vh;
+}
+
+#trophy{
+    margin-left: 42%;
+}
+@keyframes changeColorCorrect{
+    0%   {background-color: rgba(26, 175, 46, 0.8);}
+    25%  {background-color: rgba(79, 235, 100, 0.8);}
+    50%  {background-color: rgba(26, 175, 46, 0.8);}
+    75%  {background-color: rgba(79, 235, 100, 0.8);}
+    100% {background-color: rgba(26, 175, 46, 0.8);}
+  }
+
+  @keyframes changeColorWrong{
+    0%   {background-color: rgba(236, 96, 107, 0.8);}
+    25%  {background-color: rgba(204, 27, 56, 0.8);}
+    50%  {background-color: rgba(236, 96, 107, 0.8);}
+    75%  {background-color: rgba(204, 27, 56, 0.8);}
+    100% {background-color: rgba(236, 96, 107, 0.8);}
+  }
+
+/*
+  @keyframes addShadow{
+    0%   {text-shadow:2px 2px 2px rgb(152, 165, 32);}
+    25%  {text-shadow:2px 2px 2px rgb(238, 230, 230);}
+    50%  {text-shadow:2px 2px 2px rgb(201, 218, 105);}
+    75%  {text-shadow:2px 2px 2px rgb(238, 215, 215);}
+    100% {text-shadow:2px 2px 2px rgb(146, 189, 47);}
+  }*/

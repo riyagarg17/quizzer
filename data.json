@@ -1,0 +1,33 @@
+{
+    "quizQ":[
+        {
+            "quiz_type":"Television",
+            "question":"How did Daenerys Targaryen eventually hatch her dragon eggs?",
+            "correctAns":"option_b",
+            "option_a":"In a lightning storm",
+            "option_b":"In a funeral pyre",
+            "option_c":"In a fireplace",
+            "option_d":"In a frozen cave"
+        },
+        {
+            "quiz_type":"Television",
+            "question":"The phrase 'Valar Morghulis' or 'all men must die' is usually responded with?",
+            "correctAns":"option_b",
+            "option_a":"Valar Rohnas or 'all men must live'",
+            "option_b":"Valar Dohaeris or 'all men must serve'",
+            "option_c":"Valar GoGo or 'all men must dance'",
+            "option_d":" "
+        },
+        {
+            "quiz_type":"Television",
+            "question":"American actor Peter Dinklage, who plays Tyrion Lannister, also had a starring role in this fantasy franchise?",
+            "correctAns":"option_b",
+            "option_a":"Lord of the Rings",
+            "option_b":"Highlander",
+            "option_c":"The Chronicles of Narnia",
+            "option_d":"The Legend of Zelda"
+        }
+
+    ]
+   
+}

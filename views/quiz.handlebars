@@ -1,0 +1,96 @@
+<div class="wrapper-quiz mx-auto mb-3 " id="quizWrapper">
+
+    {{#if msg}}
+    <i class="fas fa-trophy fa-5x mb-3" id="trophy"></i>
+    <p class="lead" id="score"> {{msg}} </p>
+    <form action="/quiz/{{user.id}}?_method=PUT" method="POST" id="submitScoreForm">
+        <input type="hidden" name="_method" value="PUT">
+        <button type="submit" class="btn btn-primary mb-3 btn-block"> Update Score</button>
+    </form>
+    {{/if}}
+    
+    {{#unless msg}}
+    <h2 class="display-4 quizTitle mb-3"> {{quizT}} </h2>
+    <div class="progress">
+        <div class="progress-bar progress-bar-success " role="progressbar" id="progress">
+        </div>
+    </div>
+    <br>
+    <p class="lead question text-center mb-4">
+        {{questions}}
+    </p>
+    <div class="row padding mb-2">
+        <div class=" col-md-5  quizOption" id="option_a" onclick="checkAns(this)">
+            {{options.[0]}}
+        </div>
+        <div class="col-md-5   quizOption" id="option_b" onclick="checkAns(this)">
+            {{options.[1]}}
+        </div>
+    </div>
+    <div class="row padding mb-3">
+        <div class="col-md-5 quizOption" id="option_c" onclick="checkAns(this)">
+            {{options.[2]}}
+        </div>
+        <div class="col-md-5   quizOption" id="option_d" onclick="checkAns(this)">
+            {{options.[3]}}
+        </div>
+    </div>
+    <form action="/quiz/calScore/{{quizT}}/{{quesNo}}" method="post" id="checkOptionForm">
+        <button class="btn btn-primary btn-block" onclick="nextQuestion(this)" id="nextQ" type="button"> Next question </button>
+        <input type="hidden" name="optionSelected" id="optionSelected" value="">
+    </form>
+</div>
+
+{{/unless}}
+
+<script>
+    var quizType = "{{quizT}}";
+    var totalNum = "{{totalQues}}";
+    var corrAns = "{{correctAns}}";
+    var quesNo = "{{quesNo}}";
+    var optionSelected;
+    var count = 0;
+    var optionId;
+
+    document.getElementById('progress').style.width = (quesNo / totalNum) * 100 + "%";
+    document.getElementById('progress').max = totalNum;
+    document.getElementById('progress').innerHTML = quesNo;
+
+    if (quesNo == totalNum)
+        document.getElementById("nextQ").innerHTML = "Finish Quiz";
+
+    function checkAns(ele) {
+        count++;
+        optionSelected = document.getElementById('optionSelected');
+        optionSelected.value = ele.id;
+        if (count) {
+            var elements = document.getElementsByClassName('quizOption');
+            for (var i = 0, length = elements.length; i < length; i++) {
+
+                elements[i].style.backgroundColor = "rgba(38, 117, 219, 0.8)";
+
+            }
+             ele.style.backgroundColor = "rgb(13, 66, 214)";
+        }
+        optionId=ele.id;
+    }
+
+    function nextQuestion(ele) {
+
+        if (optionSelected.value == corrAns) {
+            document.getElementById(optionSelected.value).style.animation = "changeColorCorrect 1s .1s";
+            document.getElementById(optionSelected.value).style.backgroundColor = "rgba(26, 175, 46, 0.8)";
+
+        }
+        else {
+            document.getElementById(optionSelected.value).style.animation = "changeColorWrong 1s .1s";
+            document.getElementById(optionSelected.value).style.backgroundColor = "rgba(236, 96, 107, 0.8)";
+            document.getElementById(corrAns).style.backgroundColor="rgba(26, 175, 46, 0.8)";
+        }
+        setTimeout(function(){
+                document.getElementById('checkOptionForm').submit();
+            },800);
+        
+    }
+
+</script>

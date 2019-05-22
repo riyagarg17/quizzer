@@ -1,0 +1,32 @@
+
+body{
+
+    background-image: url('/images/background.jpg');
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.logo{
+
+    font-family: 'Rakkas', cursive;
+    font-size: 27px;
+    color: #ec5252;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.navbar{
+    background-color: #ec5252;
+    font-size: 20px;
+}
+
+.userLogo{
+    width: 40px;
+    cursor: pointer;
+}

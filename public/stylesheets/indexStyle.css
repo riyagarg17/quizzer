@@ -1,0 +1,32 @@
+h1{
+    font-family: 'Gloria Hallelujah', cursive;
+    color: white;
+    padding: 20px;
+}
+
+img{
+
+    width: 100px;
+    height: auto;
+}
+
+.wrapper{
+
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 9px;
+    width:60%;
+    padding-left:40px;
+}
+
+.card{
+
+    padding-top:20px;
+    transition:all 0.5s;
+}
+
+.card:hover{
+    box-shadow: 0 4px 8px 4px rgba(199, 77, 77, 0.5);
+    transform: translateY(-5px);
+    border-radius: 5px;
+}
