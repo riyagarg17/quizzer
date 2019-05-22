@@ -5,7 +5,7 @@ const moment = require('moment');
 const db=require('../config/database');
 
 mongoose.connect(db.mongoURI, { useNewUrlParser: true })
-.then(()=>console.log('db Connected'))
+.then(()=>console.log(db.mongoURI))
 .catch(err=>console.log('Couldn\'t connect',err));
 
 
