@@ -15,8 +15,11 @@ app.use(flash());
 // passport config 
 require('./config/passport')(passport);
 
+//db config
+const db=require('./config/database');
+
 //connect to mongoose
-mongoose.connect('mongodb://localhost:27017/quizzer', { useNewUrlParser: true })
+mongoose.connect(db.mongoURI, { useNewUrlParser: true })
 .then(()=>console.log('Connected'))
 .catch(err=>console.log('Couldn\'t connect',err));
 

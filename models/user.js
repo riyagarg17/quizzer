@@ -1,7 +1,10 @@
 const mongoose=require('mongoose');
 const moment = require('moment');
 
-mongoose.connect('mongodb://localhost:27017/quizzer', { useNewUrlParser: true })
+//db config
+const db=require('../config/database');
+
+mongoose.connect(db.mongoURI, { useNewUrlParser: true })
 .then(()=>console.log('db Connected'))
 .catch(err=>console.log('Couldn\'t connect',err));
 
