@@ -2,11 +2,11 @@ const mongoose=require('mongoose');
 const moment = require('moment');
 
 //db config
-const db=require('../config/database');
+/*const db=require('../config/database');
 
 mongoose.connect(db.mongoURI, { useNewUrlParser: true })
 .then(()=>console.log('db Connected'))
-.catch(err=>console.log('Couldn\'t connect',err));
+.catch(err=>console.log('Couldn\'t connect',err));*/
 
 
 //creating schema

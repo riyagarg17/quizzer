@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport=require('passport');
+//db config
+const db=require('./config/database');
 
 const app=express();
 
@@ -14,9 +16,6 @@ app.use(flash());
 
 // passport config 
 require('./config/passport')(passport);
-
-//db config
-const db=require('./config/database');
 
 //connect to mongoose
 mongoose.connect(db.mongoURI, { useNewUrlParser: true })
